@@ -123,7 +123,7 @@ StartupEvents.registry('block', event => {
         .property(BlockProperties.FACING)
         .property(BlockProperties.HALF)
         .placementState(state => {
-            state.set(BlockProperties.FACING, state.nearestLookingDirection.opposite)
+            state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
             state.set(BlockProperties.HALF, 'bottom')
         })
 
