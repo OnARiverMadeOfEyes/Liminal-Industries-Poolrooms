@@ -118,7 +118,7 @@ StartupEvents.registry('block', event => {
 		.unbreakable()
 		.waterlogged()
     
-    event.create('pool_locker_single').displayName('Pool Locker - Single')
+    event.create('pool_locker_single').displayName('Pool Locker')
         .soundType("metal")
         .property(BlockProperties.FACING)
         .property(BlockProperties.HALF)
@@ -128,7 +128,7 @@ StartupEvents.registry('block', event => {
             state.set(BlockProperties.HALF, 'bottom')
         })
 		
-    event.create('pool_locker_double').displayName('Pool Locker - Double')
+    event.create('pool_locker_double').displayName('Pool Locker')
         .soundType("metal")
         .property(BlockProperties.FACING)
         .property(BlockProperties.HALF)
