@@ -118,15 +118,26 @@ StartupEvents.registry('block', event => {
 		.unbreakable()
 		.waterlogged()
     
-    event.create('pool_locker').displayName('Pool Locker')
+    event.create('pool_locker_single').displayName('Pool Locker - Single')
         .soundType("metal")
         .property(BlockProperties.FACING)
         .property(BlockProperties.HALF)
+		.unbreakable()
         .placementState(state => {
             state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
             state.set(BlockProperties.HALF, 'bottom')
         })
-
+		
+    event.create('pool_locker_double').displayName('Pool Locker - Double')
+        .soundType("metal")
+        .property(BlockProperties.FACING)
+        .property(BlockProperties.HALF)
+		.unbreakable()
+        .placementState(state => {
+            state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
+            state.set(BlockProperties.HALF, 'bottom')
+        })
+		
 //Ceiling
 	event.create('ceilling').displayName('Ceiling')
 		.fullBlock(true)
