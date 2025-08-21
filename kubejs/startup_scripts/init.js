@@ -117,6 +117,15 @@ StartupEvents.registry('block', event => {
 		.soundType("deepslate")
 		.unbreakable()
 		.waterlogged()
+    
+    event.create('pool_locker').displayName('Pool Locker')
+        .soundType("metal")
+        .property(BlockProperties.FACING)
+        .property(BlockProperties.HALF)
+        .placementState(state => {
+            state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
+            state.set(BlockProperties.HALF, 'bottom')
+        })
 
 //Ceiling
 	event.create('ceilling').displayName('Ceiling')
