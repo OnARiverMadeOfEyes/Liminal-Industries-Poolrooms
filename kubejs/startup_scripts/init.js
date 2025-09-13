@@ -137,6 +137,20 @@ StartupEvents.registry('block', event => {
             state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
             state.set(BlockProperties.HALF, 'bottom')
         })
+    
+    let poolChairs = (id, name) => {
+        let chair = event.create(id).displayName(name + " Pool Chair")
+            .property(BlockProperties.FACING)
+            .property(BlockProperties.HALF)
+            .placementState(state => {
+                state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
+                state.set(BlockProperties.HALF, 'front')
+            })
+        
+        return chair
+    }
+    
+    poolChairs('birch_pool_chair', 'Birch').soundType("wood")
 		
 //Ceiling
 	event.create('ceilling').displayName('Ceiling')

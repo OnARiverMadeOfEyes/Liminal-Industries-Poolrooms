@@ -1,0 +1,36 @@
+{
+    "variants": {
+        "facing=north,half=front": {
+            "model": "kubejs:block/birch_pool_chair_front",
+            "y": 0
+        },
+        "facing=east,half=front": {
+            "model": "kubejs:block/birch_pool_chair_front",
+            "y": 90
+        },
+        "facing=south,half=front": {
+            "model": "kubejs:block/birch_pool_chair_front",
+            "y": 180
+        },
+        "facing=west,half=front": {
+            "model": "kubejs:block/birch_pool_chair_front",
+            "y": 270
+        },
+        "facing=north,half=back": {
+            "model": "kubejs:block/birch_pool_chair_back",
+            "y": 0
+        },
+        "facing=east,half=back": {
+            "model": "kubejs:block/birch_pool_chair_back",
+            "y": 90
+        },
+        "facing=south,half=back": {
+            "model": "kubejs:block/birch_pool_chair_back",
+            "y": 180
+        },
+        "facing=west,half=back": {
+            "model": "kubejs:block/birch_pool_chair_back",
+            "y": 270
+        }
+    }
+}
