@@ -1,0 +1,6 @@
+{
+    "parent": "kubejs:item/template_pool_chair",
+    "textures": {
+        "all": "kubejs:block/birch_pool_chair"
+    }
+}
