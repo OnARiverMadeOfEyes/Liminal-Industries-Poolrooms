@@ -1,0 +1,7 @@
+{
+    "parent": "kubejs:block/pool_chair_front",
+    "textures": {
+        "all": "kubejs:block/birch_pool_chair",
+        "particle": "minceraft:block/birch_planks"
+    }
+}

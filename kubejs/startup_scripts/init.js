@@ -137,6 +137,21 @@ StartupEvents.registry('block', event => {
             state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
             state.set(BlockProperties.HALF, 'bottom')
         })
+    
+    let poolChairs = (id, name, sound) => {
+        event.create(id).displayName(name + " Pool Chair")
+            .fullBlock(false)
+            .soundType(sound)
+            .box(1, 0, 1, 15, 5, 15) //I have no idea how to make the front and back halves have different hitboxes. Also no idea how to rotate them either.
+            .property(BlockProperties.FACING)
+            .property(BlockProperties.HALF)
+            .placementState(state => {
+                state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
+                state.set(BlockProperties.HALF, 'bottom') //bottom is front, top is back
+            })
+    }
+    
+    poolChairs('birch_pool_chair', 'Birch', "wood")
 		
 //Ceiling
 	event.create('ceilling').displayName('Ceiling')
