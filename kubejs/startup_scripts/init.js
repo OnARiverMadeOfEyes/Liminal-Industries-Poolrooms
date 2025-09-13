@@ -138,19 +138,19 @@ StartupEvents.registry('block', event => {
             state.set(BlockProperties.HALF, 'bottom')
         })
     
-    let poolChairs = (id, name) => {
-        let chair = event.create(id).displayName(name + " Pool Chair")
+    //I have no idea how to handle the hitboxes for this.
+    let poolChairs = (id, name, sound) => {
+        event.create(id).displayName(name + " Pool Chair")
+            .soundType(sound)
             .property(BlockProperties.FACING)
             .property(BlockProperties.HALF)
             .placementState(state => {
                 state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
-                state.set(BlockProperties.HALF, 'front')
+                state.set(BlockProperties.HALF, 'bottom')
             })
-        
-        return chair
     }
     
-    poolChairs('birch_pool_chair', 'Birch').soundType("wood")
+    poolChairs('birch_pool_chair', 'Birch', "wood")
 		
 //Ceiling
 	event.create('ceilling').displayName('Ceiling')

@@ -22,18 +22,37 @@ let verticleDouble = (blockID) => {
     })
 }
 
+let backSide = (dir) => {
+    if(dir == "north"){
+        return "south"
+    }else if(dir == "west"){
+        return "east"
+    }else if(dir == "east"){
+        return "west"
+    }
+    return "north"
+}
+
 let horizontalDouble = (blockID) => {
     BlockEvents.placed(blockID, event => {
         const {block, entity} = event
-        const backHalf = block[entity.horizontalDirection.opposite]
+        const backHalf = block[backSide(block.properties.facing)]
         if(backHalf.id != 'minecraft:air'){
             event.cancel()
             return
         }else{
             backHalf.set(blockID, {
                 facing: block.properties.facing,
-                half: 'back'
+                half: 'top'
             })
+        }
+    })
+
+    BlockEvents.broken(blockID, event => {
+        const {block, entity} = event
+        const otherHalf = block.properties.half == 'bottom' ? block[backSide(block.properties.facing)] : block[block.properties.facing]
+        if(otherHalf.id == blockID){
+            otherHalf.set('minecraft:air')
         }
     })
 }
