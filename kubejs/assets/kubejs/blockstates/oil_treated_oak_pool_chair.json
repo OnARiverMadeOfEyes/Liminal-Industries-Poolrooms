@@ -1,0 +1,36 @@
+{
+    "variants": {
+        "facing=north,half=bottom": {
+            "model": "kubejs:block/oil_treated_oak_pool_chair_front",
+            "y": 0
+        },
+        "facing=east,half=bottom": {
+            "model": "kubejs:block/oil_treated_oak_pool_chair_front",
+            "y": 90
+        },
+        "facing=south,half=bottom": {
+            "model": "kubejs:block/oil_treated_oak_pool_chair_front",
+            "y": 180
+        },
+        "facing=west,half=bottom": {
+            "model": "kubejs:block/oil_treated_oak_pool_chair_front",
+            "y": 270
+        },
+        "facing=north,half=top": {
+            "model": "kubejs:block/oil_treated_oak_pool_chair_back",
+            "y": 0
+        },
+        "facing=east,half=top": {
+            "model": "kubejs:block/oil_treated_oak_pool_chair_back",
+            "y": 90
+        },
+        "facing=south,half=top": {
+            "model": "kubejs:block/oil_treated_oak_pool_chair_back",
+            "y": 180
+        },
+        "facing=west,half=top": {
+            "model": "kubejs:block/oil_treated_oak_pool_chair_back",
+            "y": 270
+        }
+    }
+}

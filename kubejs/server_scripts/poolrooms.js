@@ -64,4 +64,6 @@ verticleDouble('kubejs:pool_locker_double')
 
 //Pool chairs
 
-horizontalDouble('kubejs:birch_pool_chair')
+horizontalDouble('kubejs:oak_pool_chair')
+horizontalDouble('kubejs:oil_treated_oak_pool_chair')
+horizontalDouble('kubejs:white_painted_oak_pool_chair')

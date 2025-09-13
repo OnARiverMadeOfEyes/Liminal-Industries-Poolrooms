@@ -138,11 +138,17 @@ StartupEvents.registry('block', event => {
             state.set(BlockProperties.HALF, 'bottom')
         })
     
-    let poolChairs = (id, name, sound) => {
+    let pool_chairs = (id, name, sound) => {
         event.create(id).displayName(name + " Pool Chair")
-            .fullBlock(false)
+			.fullBlock(false)
+			.opaque(false)
+			.notSolid()
+			.viewBlocking(false)
+			.waterlogged()
             .soundType(sound)
-            .box(1, 0, 1, 15, 5, 15) //I have no idea how to make the front and back halves have different hitboxes. Also no idea how to rotate them either.
+            .box(1, 0, 1, 15, 5, 15) // Meeps fix
+			//.box(1, 0, 1, 15, 5, 16) // Correct box for FRONT Part
+			//.box(1, 0, 1, 15, 5, 11) // Correct box for BACK Part
             .property(BlockProperties.FACING)
             .property(BlockProperties.HALF)
             .placementState(state => {
@@ -151,7 +157,9 @@ StartupEvents.registry('block', event => {
             })
     }
     
-    poolChairs('birch_pool_chair', 'Birch', "wood")
+    pool_chairs('oak_pool_chair', 'Oak', "wood")
+    pool_chairs('oil_treated_oak_pool_chair', 'Oil Treated Oak', "wood")
+    pool_chairs('white_painted_oak_pool_chair', 'White Painted Oak', "wood")
 		
 //Ceiling
 	event.create('ceilling').displayName('Ceiling')
