@@ -145,6 +145,7 @@ StartupEvents.registry('block', event => {
 			.notSolid()
 			.viewBlocking(false)
 			.waterlogged()
+            .tagBlock('minecraft:mineable/axe')
             .soundType(sound)
             .box(1, 0, 1, 15, 5, 15) // Meeps fix
 			//.box(1, 0, 1, 15, 5, 16) // Correct box for FRONT Part
