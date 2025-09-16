@@ -145,6 +145,8 @@ StartupEvents.registry('block', event => {
 			.notSolid()
 			.viewBlocking(false)
 			.waterlogged()
+            .tagBlock('minecraft:mineable/axe')
+            .tagItem('backrooms:wooden_furniture')
             .soundType(sound)
             .box(1, 0, 1, 15, 5, 15) // Meeps fix
 			//.box(1, 0, 1, 15, 5, 16) // Correct box for FRONT Part
@@ -157,9 +159,9 @@ StartupEvents.registry('block', event => {
             })
     }
     
-    pool_chairs('oak_pool_chair', 'Oak', "wood")
-    pool_chairs('oil_treated_oak_pool_chair', 'Oil Treated Oak', "wood")
-    pool_chairs('white_painted_oak_pool_chair', 'White Painted Oak', "wood")
+    pool_chairs('oak_pool_chair', 'Oak', "wood").tagItem('backrooms:oak_furniture')
+    pool_chairs('oil_treated_oak_pool_chair', 'Oil Treated Oak', "wood").tagItem('backrooms:oak_furniture')
+    pool_chairs('white_painted_oak_pool_chair', 'White Painted Oak', "wood").tagItem('backrooms:oak_furniture') //For different wood types, tag with a diifferent wood type. See wooden_furnature.js
 		
 //Ceiling
 	event.create('ceilling').displayName('Ceiling')
