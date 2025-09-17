@@ -159,9 +159,9 @@ StartupEvents.registry('block', event => {
             })
     }
     
-    pool_chairs('oak_pool_chair', 'Oak', "wood").tagItem('backrooms:oak_furniture')
-    pool_chairs('oil_treated_oak_pool_chair', 'Oil Treated Oak', "wood").tagItem('backrooms:oak_furniture')
-    pool_chairs('white_painted_oak_pool_chair', 'White Painted Oak', "wood").tagItem('backrooms:oak_furniture') //For different wood types, tag with a diifferent wood type. See wooden_furnature.js
+    pool_chairs('oak_pool_chair', 'Oak', "wood")
+    pool_chairs('oil_treated_oak_pool_chair', 'Oil Treated Oak', "wood")
+    pool_chairs('white_painted_oak_pool_chair', 'White Painted Oak', "wood")
 		
 //Ceiling
 	event.create('ceilling').displayName('Ceiling')
