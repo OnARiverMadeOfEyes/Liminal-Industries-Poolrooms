@@ -1,6 +1,0 @@
-{
-    "parent": "kubejs:item/pool_chair",
-    "textures": {
-        "0": "kubejs:block/white_painted_oak_pool_chair"
-    }
-}
