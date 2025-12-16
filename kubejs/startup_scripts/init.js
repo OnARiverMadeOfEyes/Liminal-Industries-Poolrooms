@@ -137,31 +137,6 @@ StartupEvents.registry('block', event => {
             state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
             state.set(BlockProperties.HALF, 'bottom')
         })
-    
-    let pool_chairs = (id, name, sound) => {
-        event.create(id).displayName(name + " Pool Chair")
-			.fullBlock(false)
-			.opaque(false)
-			.notSolid()
-			.viewBlocking(false)
-			.waterlogged()
-            .tagBlock('minecraft:mineable/axe')
-            .tagItem('backrooms:wooden_furniture')
-            .soundType(sound)
-            .box(1, 0, 1, 15, 5, 15) // Meeps fix
-			//.box(1, 0, 1, 15, 5, 16) // Correct box for FRONT Part
-			//.box(1, 0, 1, 15, 5, 11) // Correct box for BACK Part
-            .property(BlockProperties.FACING)
-            .property(BlockProperties.HALF)
-            .placementState(state => {
-                state.set(BlockProperties.FACING, state.horizontalDirection.opposite)
-                state.set(BlockProperties.HALF, 'bottom') //bottom is front, top is back
-            })
-    }
-    
-    pool_chairs('oak_pool_chair', 'Oak', "wood")
-    pool_chairs('oil_treated_oak_pool_chair', 'Oil Treated Oak', "wood")
-    pool_chairs('white_painted_oak_pool_chair', 'White Painted Oak', "wood")
 		
 //Ceiling
 	event.create('ceilling').displayName('Ceiling')

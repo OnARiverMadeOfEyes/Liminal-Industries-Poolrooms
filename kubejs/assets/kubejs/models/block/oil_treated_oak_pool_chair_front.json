@@ -1,7 +1,0 @@
-{
-    "parent": "kubejs:block/pool_chair_front",
-    "textures": {
-        "0": "kubejs:block/oil_treated_oak_pool_chair",
-        "particle": "kubejs:block/oil_treated_oak_pool_chair_particle"
-    }
-}
